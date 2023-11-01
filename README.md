@@ -24,7 +24,6 @@ The Alura+ website was developed using the following technologies:
 
 - HTML
 - CSS
-- JavaScript
 
 
 
