@@ -1,9 +1,10 @@
-# <span style="color: MediumBlue;">Alura+ Website</span>
+# Alura+ Website
 
 This repository contains the source code for the "Alura+" website, a site that offers an exclusive combo of technology courses and English courses for programmers.
 
 
-## <span style="color:CornflowerBlue;">Overview</span>
+
+## Overview
 
 The "Alura+" website was developed as part of my learning project to enhance my web programming skills. It is designed to be an online learning platform and offers the following features:
 
@@ -17,7 +18,7 @@ The "Alura+" website was developed as part of my learning project to enhance my 
 
 
 
-## <span style="color:CornflowerBlue;">Technologies Used</span>
+## Technologies Used
 
 The Alura+ website was developed using the following technologies:
 
@@ -26,17 +27,20 @@ The Alura+ website was developed using the following technologies:
 - JavaScript
 
 
-## <span style="color:CornflowerBlue;">How to Use</span>
+
+## How to Use
 
 To view the site, simply open the `index.html` file in your web browser. You can also clone this repository and host it on a web server of your choice.
 
 
-## <span style="color:CornflowerBlue;">Author</span>
+
+## Author
 
 This site was developed by Carolina Wainstein.
 
 
-## <span style="color:CornflowerBlue;">License</span>
+
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
