@@ -4,7 +4,6 @@ This repository contains the source code for the "Alura+" website, a site that o
 Link: https://carolwainstein.github.io/alura-plus/
 
 
-<br>
 ## Overview
 
 The "Alura+" website was developed as part of my learning project to enhance my web programming skills. It is designed to be an online learning platform and offers the following features:
@@ -18,7 +17,6 @@ The "Alura+" website was developed as part of my learning project to enhance my 
 - **Language**: The site is predominantly in Portuguese, but we are exploring the possibility of supporting multiple languages in the future.
 
 
-<br>
 ## Technologies Used
 
 The Alura+ website was developed using the following technologies:
@@ -27,19 +25,16 @@ The Alura+ website was developed using the following technologies:
 - CSS
 
 
-<br>
 ## How to Use
 
 To view the site, simply open the `index.html` file in your web browser. You can also clone this repository and host it on a web server of your choice.
 
 
-<br>
 ## Author
 
 This site was developed by Carolina Wainstein.
 
 
-<br>
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
