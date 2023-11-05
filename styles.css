@@ -21,25 +21,30 @@ body {
     padding: 0;
 }
 
-.principal {
-    background-image: url("imagens/Background.png");
-    background-repeat: no-repeat;
-    background-size: contain ;
-    background-position: right;
-    height: 100%;
+.background{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
 }
 
-.container {
-    position: absolute;
+.container__caixa {
     top: 15%;
     left: 5%;
+    float: left;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 39%;
+    width: 50%;
     text-align: center;
     gap: 1em;
-
 }
 
 .container__titulo {
@@ -47,7 +52,8 @@ body {
     font-weight: 700;
 }
 
-.container__botao {
+.container__botao,
+.secundario__botao {
     background-color: var(--botao-azul);
     color: var(--branco-principal);
     border-radius: 8px;
@@ -81,7 +87,8 @@ body {
     margin: 0 1em;
 }
 
-.container__secundario {
+.container__secundario,
+.container__secundario_adaptado {
     top: 90%;
     padding: 5em;
     display: flex;
@@ -113,7 +120,7 @@ body {
     color: var(--branco-secundario);
 }
 
-.secundario__botao{
+.secundario__botao {
     display: inline-block;
     margin-top: 1em;
 }
@@ -204,4 +211,53 @@ body {
 
 .footer__links__lista:visited {
     color: var(--botao-azul-efeito)
+}
+
+@media (max-width: 1007px) {
+    .container,
+    .container__secundario_adaptado {
+        flex-direction: column-reverse;
+    }
+
+    .background {
+        width: 100%;
+    }
+
+    .container__caixa {
+        width: 100%;
+    }
+
+    .container__secundario {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descricao__titulo, 
+    .descricao__texto {
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .secundario__botao {
+       margin-top: 2em;
+       position: absolute;
+       left: 45%;
+    }
+
+    .dispositivos__lista,
+    .footer__links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dispositivos__titulo {
+        text-align: center;    }
+}
+
+@media (max-widh: 500px){
+    .secundario__botao {
+        margin-top: 2em;
+        position: absolute;
+        left: 40%;
+     }
 }
