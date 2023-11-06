@@ -4,16 +4,27 @@
     --cinza-segundario: #C0C0C0;
     --botao-azul: #167BF7;
     --cor-de-fundo: #00030C;
-    --fonte-principal: 'Inter';
     --botao-azul-efeito: #4699ff;
+    --fonte-principal: 'Inter';
+    --fonte-size-principal: 16px;
+    --fonte-size-conteiner-titulo: 28px;
+    --fonte-size-conteiner-aviso: 12px;
+    --fonte-size-dispositivos: 48px;
+    --fonte-size-dipositivos-texto: 32px;
+    --fonte-size-footer: 14px;
 }
 
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
-    font-size: 16px;
+    font-size: var(--fonte-size-principal);
     font-weight: 400;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 * {
@@ -48,7 +59,7 @@ body {
 }
 
 .container__titulo {
-    font-size: 28px;
+    font-size: var(--fonte-size-conteiner-titulo);
     font-weight: 700;
 }
 
@@ -76,7 +87,7 @@ body {
 
 .container__aviso {
     color: var(--cinza-segundario);
-    font-size: 12px;
+    font-size: var(--fonte-size-conteiner-aviso);
 }
 
 .container__imagem {
@@ -109,14 +120,14 @@ body {
 
 .descricao__titulo {
     font-weight: 700;
-    font-size: 48px;
+    font-size: var(--fonte-size-dispositivos);
     color: var(--branco-principal);
     margin-bottom: 0.1em;
 }
 
 .descricao__texto {
     font-weight: 400;
-    font-size: 16px;
+    font-size: var(--fonte-size-principal);
     color: var(--branco-secundario);
 }
 
@@ -132,9 +143,9 @@ body {
 }
 
 .dispositivos__titulo {
-    color: var(--branco-principa);
+    color: var(--branco-principal);
     font-family: var(--fonte-principal);
-    font-size: 48px;
+    font-size: var(--fonte-size-dispositivos);
     font-weight: 700;
     padding: 1em;
 }
@@ -169,7 +180,7 @@ body {
 .footer__links {
     padding: 1em;
     color: var(--branco-principal);
-    font-size: 16px;
+    font-size: var(--fonte-size-principal);
     list-style: none;
     display: flex;
     justify-content: center;
@@ -185,7 +196,7 @@ body {
 
 .footer__texto {
    color: var(--cinza-segundario);
-   font-size: 14px; 
+   font-size: var(--fonte-size-footer); 
    padding: 1em;
 }
 
@@ -213,35 +224,42 @@ body {
     color: var(--botao-azul-efeito)
 }
 
+/* Estilos para telas menores ou iguais a 1007px */
 @media (max-width: 1007px) {
-    .container,
     .container__secundario_adaptado {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 3.2em;
+        text-align: center;
+    }
+
+    .container {
         flex-direction: column-reverse;
     }
 
-    .background {
-        width: 100%;
+    .secundario__botao {
+        margin-top: 2em;
     }
 
+    .container__secundario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2em;
+        padding: 3.2em;
+    }
+
+    .background,
     .container__caixa {
         width: 100%;
     }
 
-    .container__secundario {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .descricao__titulo, 
+    .descricao__titulo,
     .descricao__texto {
         text-align: center;
         margin-top: 2em;
-    }
-
-    .secundario__botao {
-       margin-top: 2em;
-       position: absolute;
-       left: 45%;
     }
 
     .dispositivos__lista,
@@ -250,14 +268,27 @@ body {
         align-items: center;
     }
 
-    .dispositivos__titulo {
-        text-align: center;    }
+    .dispositivos__titulo,
+    .container__imagem,
+    .secundario__imagem {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dispositivos {
+        width: 100%;
+        padding: 0;
+    }
 }
 
-@media (max-width: 500px){
-    .secundario__botao {
-        margin-top: 2em;
-        position: absolute;
-        left: 40%;
-     }
+@media (max-width: 500px) {
+    .container__descricao {
+        width: 90%;
+    }
+
+    .dispositivos__titulo,
+    .descricao__titulo,
+    .dispositivos__descricao_texto {
+        font-size: var(--fonte-size-conteiner-titulo);
+    }
 }
